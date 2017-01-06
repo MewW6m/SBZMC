@@ -1,0 +1,184 @@
+/*
+*Copyright (c) 2016 Yoshihiro Furudate
+*Released under the MIT license
+*http://opensource.org/licenses/mit-license.php
+* Caution
+*  Don't remove this file because we don't prepare other color default file.
+*  The change is on your responsibility all.
+*/
+
+/* リンクの色 */
+	a{ color: white; }
+
+/* タイトル"SBZMC"の文字色 */
+	#header h1{ color: white; }
+
+/* サブタイトル"SBZMC"の文字色 */
+	#header span{ color: white; }
+
+/* タイトル/サブタイトルのブラー色,範囲 */
+	#logo{
+	  text-shadow: 0 0 10px #fff,
+		       0 0 10px #fff;
+	}
+
+/* ソースコード表示の際の文字色 */
+	#code{ color: white; }
+
+/* ソースコード表示の際の縦線の色 */
+	.codenumber{ border-color: white; }
+
+/* メインブロックのファイル名の色 */
+	.panelheader > p{ 
+	  color: white; 
+	}
+
+/* メインブロックのファイル名と内容を挟む横線の色 */
+	.panelheader{
+	  border-bottom-color:white;
+	}
+
+
+/* .mdファイルの表示の時の文字色 */
+	#readmemd{ color: white; }
+
+/* 背景色(線以外のところ) */
+	#canvas{ background-color: black; }
+
+/* スマホナビゲーションメニュー全体の背景色 */
+	#menu{ background-color: black; }
+
+/* スマホナビゲーションのプロフ画像のフレーム色*/
+	#menutop img{ border-color: black; }
+
+/* スマホナビゲーションの名前装飾(色/ボーダー) */
+	#menutop h2{ 
+  	  color: rgba(0,0,0,1);
+  	  text-shadow: -1px -1px 0px white, 
+          	        1px -1px 0px white, 
+                	 1px 1px 0px white, 
+                	-1px 1px 0px white;
+	}
+
+/* デスクトップサイズの時の左上名前文字色 */
+	#apfiname{color: white;}
+
+/* デスクトップサイズの時の左上名前下線色 */
+	#apfiname hr{border-color: white;}
+
+/* スマホナビゲーションが開いていない時の左上三ボタンの周りの色 */
+	#panel{ 
+  	  color: white;
+  	  border-color: white;
+	}
+
+/* スマホナビゲーションが開いていない時の左上三ボタンの中の色 */
+	#panel svg path{
+  	  fill: white;
+ 	   stroke: white;
+	}
+
+/* スマホナビゲーションが開いている時の左上三ボタンの周りの色 */
+	.transafter{ border-color: #474747 !important; }
+
+/* スマホナビゲーションが開いている時の左上三ボタンの中の色 */
+	.transafter path{
+  	  fill: #474747 !important;
+  	  stroke: #474747 !important;
+	}
+
+/* デスクトップサイズの時の右上ボタン文字色、枠色 */
+	.buttons{
+  	  color: white;
+  	  border-color: white;
+	}
+
+/* デスクトップサイズの時の右上ボタン文字色、枠色(非アクティブ時) */
+	#buttons > div{
+  	  border: 4px double rgba(255,255,255,0.3) !important;
+  	  color: rgba(255,255,255,0.3) !important;
+	}
+
+/* スマホサイズの時の右上ボタン色 */
+	#logobuttons > svg > path{
+ 	   fill: rgba(255,255,255,0.3) !important;
+  	   stroke: rgba(255,255,255,0.0) !important;
+	}
+
+/* 一番下"Copyrightの部分色" */
+	#footer p{ color: white; }
+
+/* デスクトップサイズの時の左パネル背景色/スクロールバー色 */
+/* スクロールバーはいじらない推奨 */
+	#left_block{ 
+	  background-color: rgba(50,50,50,0.8);
+	  scrollbar-base-color: rgba(50,50,50,0.8);
+	  scrollbar-base-color: rgba(50,50,50,0.8);
+	  scrollbar-3dlight-color: rgba(50,50,50,0.8);
+	  scrollbar-highlight-color: rgba(50,50,50,0.8);
+	  scrollbar-track-color: rgba(50,50,50,0.8);
+	  scrollbar-arrow-color: rgba(50,50,50,0.8);
+	  scrollbar-shadow-color: rgba(50,50,50,0.8);
+	  scrollbar-dark-shadow-color: rgba(50,50,50,0.8);
+	}
+
+/* メインパネル背景色 */
+	#right_block{ background-color: rgba(50,50,50,0.8); }
+
+/* メインパネル"scroll"ボタン" 初期色 いじらない推奨*/
+	#scroll{ color: rgb(125,125,125); }
+
+/* スマホナビゲーションが開いていない時の画面全体の背景 */
+	.fixed { background-color: black; }
+
+/* スマホナビゲーションが開いていない時の右側(この場合画面全体)を覆う色 */
+/* いじらない推奨 */
+	.fixed:before{ background-color: rgba(0,0,0,0); }
+
+/* スマホナビゲーションが開いている時の右側を覆う色 */
+	.fixed-open:before{ background-color: rgba(0,0,0,.7) !important; }
+
+/* スマホナビゲーションメニュー文字色 */
+	.dropmenu li a{ color: #fff; }
+
+/* スマホナビゲーションメニューパネルの隙間の色 */
+	.dropmenu li a span{
+	  border-top-color:#D2C498;
+	  border-bottom-color:#D2C498;
+	}
+
+/* ファイルツリー内の表示しているファイルの色 */
+	.mainmenu .thisfile{ color: red !important; }
+
+/* スマホナビゲーションメニューパネルの背景色 */
+/* 上から順に1階層,2階層..., 10階層と続く */
+	.dropmenu>li>a>span{
+	  background-color: rgb(10,10,10);
+	}
+	.dropmenu>li>ul>li>a>span{
+	  background-color: rgb(30,30,30);
+	}
+	.dropmenu>li>ul>li>ul>li>a>span{
+	  background-color: rgb(50,50,50);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(70,70,70);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(80,80,80);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(90,90,90);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(100,100,100);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(110,110,110);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(120,120,120);
+	}
+	.dropmenu>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>ul>li>a>span{
+	  background-color: rgb(130,130,130);
+	}

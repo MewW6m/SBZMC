@@ -1,0 +1,37 @@
+#!/bin/bash
+while true;do
+echo -e "このコマンドは、プログラム'SBZMC'のフォーマッティングをするコマンドです。\nそのフォルダ以外には一切影響を与えません。"
+echo "本当にこのコマンドを実行しますか？ (yes/no)"
+read answer
+case $answer in
+    y*) echo -e "\nメインファイルの'著作権年を更新しています....'"
+        mky=`date | awk '{print substr($1, 1, 4)}'`
+        sed -i -e 's/datetime.today().year/"'$mky'"/' $HOME/SBZMC/sbzmc.py
+	echo -e "\nSBZMCフォルダのパーミッション調整をしています..."
+        chmod 755 $HOME/SBZMC $HOME/SBZMC/* $HOME/SBZMC/static/* $HOME/SBZMC/templates/* $HOME/SBZMC/static/customForUser/*
+	chmod 555 $HOME/SBZMC/static/default $HOME/SBZMC/static/default/*
+	echo -e "\n公開パーミッション「r」の入っていないファイルを検索しています..."
+	find $HOME ! -perm -o=r -print 2>/dev/null
+	findlist=`find $HOME -perm -o=r -print 2>/dev/null`
+	echo -e "これらのファイルはSBZMCで表示されません。\nもし表示させるのであれば、パーミッションをApacheが読めるように(755や754などに)してください。"
+	echo -e "\n'password'という名前や文字列の入ったファイルを検索しています..."
+	passlist=`grep -n -i -I -w -r -b --exclude="*.min.*" --color=always "password" $findlist 2>/dev/null | sort | uniq -d`
+	passline=`echo "$passlist" | wc -l`
+	echo "$passlist"
+	echo -e "\n\e[31mpassword\e[mと入ったファイルが\e[31m" $passline "件\e[m見つかりました。"
+	if [ $passline = 0 ]; then
+	 echo "脆弱性はありません。"
+	else
+	 echo -e "これらのファイルはSBZMCからその文字列を見られる可能性があり非常に危険です。\nそのファイルの公開パーミッションを-rにするか(751など)、そのファイルをignore.txtに加えることを検討してください。"
+	 echo -e "※ ignore.txtに加えることで、そのファイルはSBZMCプログラムから読まれなくなります。ファイル名を記載するか、「ファイル名: 'パスワード文字列' --> '置き換え文字列'」と記載してください。"
+	fi
+	break
+	;;
+    n*)
+	break
+        ;;
+    *)
+        echo "Please select of yes(y) or no(n)."
+	;;
+esac
+done

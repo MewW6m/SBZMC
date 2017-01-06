@@ -1,0 +1,51 @@
+{# Copyright (c) 2016 Yoshihiro Furudate
+   Released under the MIT license
+   http://opensource.org/licenses/mit-license.php #}
+{% extends 'base.html' %}
+{% block extra_head %}
+{% endblock %}
+
+{% block container %}
+	<div id="left_block" class="mainmenu codeblock">
+		<div>
+			<div class="panelheader"><p>MyProjects</p></div>
+			<ul>
+			{% include "loop.html" %}
+                	</ul>
+		</div>
+	</div>
+	<div class="clearfix codeblock" id="right_block">
+		<div>
+		{% if filename[-3:] == ".md" %}
+                	{% for fi in openfile %}
+			{% if loop.first %}
+			<div class="panelheader"><p id="fina">{{ fi|replace("/home/h0", "")|replace("{{ name }}", name|upper() )|replace("<h1>", "")|replace("</h1>", "")|replace("<h2>", "")|replace("</h2>", "")|replace("<h3>", "")|replace("</h3>", "")|replace("<h4>", "")|replace("</h4>", "")|replace("<h5>", "")|replace("</h5>", "")|replace("<h6>", "")|replace("</h6>", "")|replace("<p>", "")|replace("</p>", "")|safe }} <span><a id="wrap">wrap</a> / <a id="scroll">scroll</a></span></p></div>
+			<pre id="pre"><code id="readmemd">
+			{% else %}
+                        {{ fi|replace("/home/h0", "")|replace("{{ name }}", name|upper())|safe }}
+			{% endif %}
+                        {% endfor %}
+               		</code></pre>
+		{% else %} 
+		<div class="panelheader"><p id="fina">{{ filename|replace("/home/h0", "") }} <span><a id="wrap">wrap</a> / <a id="scroll">scroll</a></span></p></div>
+		<pre id="pre"><code id="code">
+			<table><tbody>
+			{% if openfile|length < 17 and openfile|length > 0 %}
+				{% for fi in openfile %}
+					<tr><td class="codenumber">{{ loop.index }}</td><td class="codetext">{{ fi|replace("/home/h0", "") }}</td></tr>
+				{% endfor  %}
+				{% for x in range(17 - openfile|length) %}
+					<tr style="height:24px;"><td class="codenumber"></td><td class="codetext"></td></tr>
+				{% endfor %}
+			{% elif openfile|length == 0 %}
+			{% else %}
+				{% for fi in openfile %}
+					<tr><td class="codenumber">{{ loop.index }}</td><td class="codetext">{{ fi }}</td></tr>
+				{% endfor  %}
+			{% endif %}
+			</tbody></table>
+		</code></pre>
+		{% endif %} 
+		</div>
+ 	</div>
+{% endblock %}

@@ -1,0 +1,195 @@
+{# Copyright (c) 2016 Yoshihiro Furudate
+   Released under the MIT license
+   http://opensource.org/licenses/mit-license.php #}
+{# filetree nest range of 1~10 #}
+{% for list1 in filelist %}
+ {% if list1 is sequence %}
+  {% if list1 is string %}
+   {% if list1 == filepath %}
+    <li><a href="{{ homepath }}{{ list1 }}"><span class="thisfile">{{ list1 }}</span></a></li>
+   {% else %}
+    <li><a href="{{ homepath }}{{ list1 }}"><span>{{ list1 }}</span></a></li>
+   {% endif %}
+  {% else %}
+   {% for list2 in list1 %}
+    {% if loop.first %}
+     <li><a class="folder"><span>{{ list2 }}</span></a><ul class="box">
+    {% else %}
+     {% if list2 is sequence %}
+      {% if list2 is string %}
+       {% if list1[0] + "/" + list2 == filepath %}
+        <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2 }}"><span class="thisfile">{{ list2 }}</span></a></li>
+       {% else %}
+        <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2 }}"><span>{{ list2 }}</span></a></li>
+       {% endif %}
+      {% else %}
+       {% for list3 in list2 %}
+        {% if loop.first %}
+         <li><a class="folder"><span>{{ list3 }}</span></a><ul class="box">
+        {% else %}
+	 {% if list3 is sequence %}
+          {% if list3 is string %}
+	   {% if list1[0] + "/" + list2[0] + "/" + list3 == filepath %}
+	    <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3 }}"><span class="thisfile">{{ list3 }}</span></a></li>
+           {% else %}
+            <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3 }}"><span>{{ list3 }}</span></a></li>
+           {% endif %}
+	  {% else %}
+	   {% for list4 in list3 %}
+	    {% if loop.first %}
+             <li><a class="folder"><span>{{ list4 }}</span></a><ul class="box">
+	    {% else %}
+	     {% if list4 is sequence %}
+              {% if list4 is string %}
+	       {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4 == filepath %}
+    		<li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4 }}"><span class="thisfile">{{ list4 }}</span></a></li>
+   	       {% else %}
+    		<li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4 }}"><span>{{ list4 }}</span></a></li>
+   	       {% endif %}
+	      {% else %}
+	       {% for list5 in list4 %}
+	        {% if loop.first %}
+                 <li><a class="folder"><span>{{ list5 }}</span></a><ul class="box">
+	        {% else %}
+		 {% if list5 is sequence %}
+                  {% if list5 is string %}
+		{% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5 == filepath %}
+    		 <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5 }}"><span class="thisfile">{{ list5 }}</span></a></li>
+   		{% else %}
+    		 <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5 }}"><span>{{ list5 }}</span></a></li>
+   		{% endif %}
+		  {% else %}
+		   {% for list6 in list5 %}
+		    {% if loop.first %}
+		     <li><a class="folder"><span>{{ list6 }}</span></a><ul class="box">
+		    {% else %}
+		     {% if list6 is sequence %}
+                      {% if list6 is string %}
+		       {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6 == filepath %}
+    			<li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6 }}"><span class="thisfile">{{ list6 }}</span></a></li>
+		       {% else %}
+    			<li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6 }}"><span>{{ list6 }}</span></a></li>
+   		       {% endif %}
+		      {% else %}
+		       {% for list7 in list6 %}
+			{% if loop.first %}
+			 <li><a class="folder"><span>{{ list7 }}</span></a><ul class="box">
+			{% else %}
+			 {% if list7 is sequence %}
+                          {% if list7 is string %}
+			   {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6[0] + "/" + list7 == filepath %}
+                            <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7 }}"><span class="thisfile">{{ list7 }}</span></a></li>
+                           {% else %}
+                            <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7 }}"><span>{{ list7 }}</span></a></li>
+                           {% endif %}
+			  {% else %}
+			   {% for list8 in list7 %}
+			    {% if loop.first %}
+			     <li><a class="folder"><span>{{ list8 }}</span></a><ul class="box">
+			    {% else %}
+			     {% if list8 is sequence %}
+                              {% if list8 is string %}
+			       {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6[0] + "/" + list7[0] + "/" + list8 == filepath %}
+                                <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8 }}"><span class="thisfile">{{ list8 }}</span></a></li>
+                               {% else %}
+                                <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8 }}"><span>{{ list8 }}</span></a></li>
+                               {% endif %}
+			      {% else %}
+			       {% for list9 in list8 %}
+				{% if loop.first %}
+				 <li><a class="folder"><span>{{ list9 }}</span></a><ul class="box">
+				{% else %}
+				 {% if list9 is sequence %}
+                                  {% if list9 is string %}
+				   {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6[0] + "/" + list7[0] + "/" + list8[0] + "/" + list9 == filepath %}
+                            	    <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9 }}"><span class="thisfile">{{ list9 }}</span></a></li>
+                                   {% else %}
+                                    <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9 }}"><span>{{ list9 }}</span></a></li>
+                                   {% endif %}
+				  {% else %}
+				   {% for list10 in list9 %}
+				    {% if loop.first %}
+				     <li><a class="folder"><span>{{ list10 }}</span></a><ul class="box">
+				    {% else %}
+				     {% if list10 is sequence %}
+                                      {% if list10 is string %}
+				       {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6[0] + "/" + list7[0] + "/" + list8[0] + "/" + list9[0] + "/" + list10 == filepath %}
+                                        <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9[0] }}/{{ list10 }}"><span class="thisfile">{{ list10 }}</span></a></li>
+                                       {% else %}
+                                        <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9[0] }}/{{ list10 }}"><span>{{ list10 }}</span></a></li>
+                                       {% endif %}
+				      {% else %}
+				       {% for list11 in list10 %}
+                                    	{% if loop.first %}
+					 <li><a class="folder"><span>{{ list11 }}</span></a><ul class="box">
+					{% else %}
+					 {% if list11 is string %}
+					   {% if list1[0] + "/" + list2[0] + "/" + list3[0] + "/" + list4[0] + "/" + list5[0] + "/" + list6[0] + "/" + list7[0] + "/" + list8[0] + "/" + list9[0] + "/" + list10[0] + "/" + list11 == filepath %}
+                                          <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9[0] }}/{{ list10[0] }}/{{ list11 }}"><span class="thisfile">{{ list11 }}</span></a></li>
+                                           {% else %}
+                                          <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9[0] }}/{{ list10[0] }}/{{ list11 }}"><span>{{ list11 }}</span></a></li>
+					   {% endif %}
+					  {% else %}
+					  <li><a href="{{ homepath }}{{ list1[0] }}/{{ list2[0] }}/{{ list3[0] }}/{{ list4[0] }}/{{ list5[0] }}/{{ list6[0] }}/{{ list7[0] }}/{{ list8[0] }}/{{ list9[0] }}/{{ list10[0] }}/{{ list11 }}"><span>{{ list11 }}</span></a></li>
+                                         {% endif %}
+					{% endif %}
+				       {% endfor %}
+				       </ul></li>
+				      {% endif %}
+				     {% else %}
+				     {% endif %}
+				    {% endif %}
+				   {% endfor %}
+				   </ul></li>
+				  {% endif %}
+				 {% else %}
+				 {% endif %}
+				{% endif %}
+			       {% endfor %}
+			       </ul></li>
+			      {% endif %}
+			     {% else %}
+			     {% endif %}
+			    {% endif %}
+			   {% endfor %}
+			   </ul></li>
+			  {% endif %}
+			 {% else %}
+			 {% endif %}
+			{% endif %}
+		       {% endfor %}
+		       </ul></li>
+		      {% endif %}
+		     {% else %}
+		     {% endif %}
+		    {% endif %}
+		   {% endfor %}
+		   </ul></li>
+		  {% endif %}
+		 {% else %}
+		 {% endif %}
+	        {% endif %}
+	       {% endfor %}
+	       </ul></li>
+	      {% endif %}
+	     {% else %}
+	     {% endif %}
+	    {% endif %}
+	   {% endfor %}
+	   </ul></li>
+	  {% endif %}
+	 {% else %}
+	 {% endif %}
+        {% endif %}
+       {% endfor %}
+       </ul></li>
+      {% endif %}
+     {% else %}
+     {% endif %}
+    {% endif %}
+   {% endfor %}
+   </ul></li>
+  {% endif %}
+ {% else %}
+ {% endif %}
+{% endfor %}
