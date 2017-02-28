@@ -24,7 +24,9 @@ window.onload = function(){
         	'padding': 256,
         	'tolerance':70
         });
-	
+	var urlist = window.location.href.split("/");
+	urlist.splice(0,5); urlist.pop(); // only foldername list
+	urlist2 = urlist.slice(0); urlist = urlist.concat(urlist2); // ×2
 /*
 * MAIN PROCESS
 */ 
@@ -94,6 +96,7 @@ window.onload = function(){
 	window.onbeforeunload = function(event){ // fadeout before jumping
   		fadeOut(document.body, 1000);
 	};
+
 	
 /*
 * FUNCTION DEFINITION
@@ -119,7 +122,22 @@ window.onload = function(){
                         	}
 				return box,boxH,copyBoxH
        			});
-			
+			/*urllocation open*/
+			if(folders[i].lastChild.innerHTML == urlist[0]){
+				var parbox, box, boxH, copyBox, copyBoxH;
+                                parbox = folders[i].lastChild.parentNode;
+                                box = parbox.nextElementSibling;
+                                boxH = box.offsetHeight;
+                                copyBox = box.cloneNode(true);
+                                box.parentNode.appendChild(copyBox);
+                                copyBox.style.cssText = "display:block; height:auto; visibility:hidden; " ;
+                                copyBoxH = copyBox.offsetHeight;
+                                box.parentNode.removeChild(copyBox);
+				box.style.display = "block";
+				box.style.minheight = copyBoxH;
+                        	box.style.height = "auto";
+				urlist.shift();
+			}
             	}
 	}
 
