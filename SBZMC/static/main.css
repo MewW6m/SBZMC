@@ -61,7 +61,7 @@ a{
   font-family:'Quasith-Regular' !important;
 }
 
-#pre{
+#pre, .highlight{
   word-break: break-all;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -587,4 +587,24 @@ a{
   display: none;
   overflow: hidden;
   height: 0;
+}
+
+/*170318 add .highlighti and other*/
+.highlight{
+  margin: 20px 50px;
+  border: 4px groove white;
+  padding: 10px;
+}
+
+#readmemd table{
+  border-collapse:collapse
+}
+
+#readmemd td:nth-child(odd), #readmemd th:nth-child(odd){
+  border-right:2px solid white; 
+  padding-right: 5px;
+}
+
+#readmemd th, #readmemd tr:not(:last-child){
+  border-bottom:2px solid white;
 }

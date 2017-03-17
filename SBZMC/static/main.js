@@ -27,6 +27,9 @@ window.onload = function(){
 	var urlist = window.location.href.split("/");
 	urlist.splice(0,5); urlist.pop(); // only foldername list
 	urlist2 = urlist.slice(0); urlist = urlist.concat(urlist2); // ×2
+	var highlight0 = document.getElementsByClassName("highlight")[0];
+	var readmemd = document.getElementById('readmemd');
+
 /*
 * MAIN PROCESS
 */ 
@@ -96,6 +99,10 @@ window.onload = function(){
 	window.onbeforeunload = function(event){ // fadeout before jumping
   		fadeOut(document.body, 1000);
 	};
+
+	/*170318 \n*2~ delete in code*/
+	if(highlight0 == true){ highlight0.innerHTML = highlight0.innerHTML.replace(/\s{2,}/g, "\n"); }
+	readmemd.innerHTML = readmemd.innerHTML.replace(/\s{2,}/g, "\n");
 
 	
 /*

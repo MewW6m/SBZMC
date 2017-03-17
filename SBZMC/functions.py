@@ -1,5 +1,7 @@
 #!/usr/local/python/bin/python
-import os, os.path, markdown, codecs
+import sys, os, os.path, markdown, codecs
+sys.path.append('/home/h0/yoshihiro/.local/lib/python3.5/site-packages')
+from mdx_gfm import GithubFlavoredMarkdownExtension
 
 def maintree(dirname):
     file = []
@@ -21,7 +23,8 @@ def maintree(dirname):
 
 def mdopen(path):
     f = open(path, 'r', encoding='utf-8'); mdtxt = f.read(); f.close()
-    md = markdown.Markdown(); openf = md.convert(mdtxt);
+    # md = markdown.Markdown(); openf = md.convert(mdtxt);
+    md = markdown.Markdown(output_format='html5', extensions=[GithubFlavoredMarkdownExtension()]); openf = md.convert(mdtxt);
     return  [line.rstrip('\n') for line in openf.split("\n")]
 
 

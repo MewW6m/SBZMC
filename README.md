@@ -73,7 +73,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
 |:---:|:--------------:|
 | 2016-01-06 | pulishing all file first. |
 | 2016-02-28 | add the function of opening menu to the file when connect the file-url |
-| | |
+| 2016-03-18 | readjustment the function of MDfile->html<br>(view-table,view-code,view_in_firefox_etc) |
 
 ### Requirement
 + Frontends
