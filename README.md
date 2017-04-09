@@ -94,7 +94,6 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
 
 ### Author
 + Yoshihiro-F (<a href="https://github.com/Yoshihiro-F/">@Yoshihiro-F</a>)
-    + His webpage -<a href="http://gms.gdl.jp/~yoshihiro">-http://gms.gdl.jp/~yoshihiro</a>
 
 ### LICENCE
 ##### Copyright (c) 2016 Yoshihiro Furudate
