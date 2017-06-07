@@ -1,7 +1,7 @@
 /*
-*Copyright (c) 2016 Yoshihiro Furudate
-*Released under the MIT license
-*http://opensource.org/licenses/mit-license.php
+* Copyright (c) 2016 Yoshihiro Furudate
+* Released under the MIT license
+* http://opensource.org/licenses/mit-license.php
 */
 
 /*base.html*/
@@ -15,6 +15,10 @@
 
 @font-face {
   font-family: 'Source Code Pro';
+}
+
+*:not(#code td){
+  font-family:-apple-system, BlinkMacSystemFont,"Helvetica Neue";
 }
 
 /* responsive */
@@ -56,8 +60,11 @@ a{
   cursor:pointer;
 }
 
-#header h1{
+#logo > h1 {
   margin:0;
+}
+
+#logo > h1 > a {
   font-family:'Quasith-Regular' !important;
 }
 
@@ -75,6 +82,7 @@ a{
   font-family:'Source Code Pro' !important;
   line-height:150%;
   display:table;
+  tab-size:4;
 }
 
 #code table{
@@ -126,6 +134,15 @@ a{
   border-style:solid;
   min-width:30px;
   vertical-align:top;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.codenumber::before{
+  content: attr(data-line-number);
 }
 
 .codetext{
@@ -305,8 +322,8 @@ a{
   color: white;
   clear: both;
   box-sizing: border-box;
-  padding: 7px;
-  border-width:1px;
+  padding: 6px;
+  border-width:2px;
   border-style:solid;
   width: 45px;
   height: 45px;
@@ -418,14 +435,10 @@ a{
   word-wrap: break-word;
 }
 
-/*
-.codeblock > hr{
-  border-width:1px;
-  border-style:solid;
-  width:97%;
-  margin-left: 10px;
+#wrap, #scroll{
+  display: inline-block;
 }
-*/
+
 #right_block{
   float:left;
   position:relative;
@@ -440,6 +453,8 @@ a{
   position:absolute;
   right:10px;
   top:45px;
+  background: rgba(200,200,200,0.2);
+  border: 1px solid rgba(200,200,200,0.1);
 }
 
 /* slideout.js */

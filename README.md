@@ -8,7 +8,7 @@
 ### Description
 + ソースコード/ファイルツリーについて
     + メインパネル(ソースコード/README.md)
-        + メインパネルには<b>ソースコードか.mdファイルの内容</b>が表示される。
+        + メインパネルには**ソースコードか.mdファイルの内容**が表示される。
         + ソースコード、.mdファイルは右上の"wrap", "scroll"ボタンで、横折り返し、横スクロールに切り替えることが可能。
         + .mdファイルはマークダウンで書かれたものをそのまま表示せず、HTMLに変換して表示される
     + リンクボタン, ダウンロードボタン
@@ -20,7 +20,7 @@
         + あるフォルダの中に"link.txt"というファイルを置き、そのなかにURLを記載すると、そのファイルと同じ階層のファイルは全てLINKボタンからそのURLにジャンプすることが可能になる。
     + ignore.txt <b style="color:crimson;">(まだ未実装)</b>
         + SBZMCフォルダの中に"ignore.txt"というファイルを置くと、その中のファイル名をファイルツリーで辿れなくしたり、パスワードなどの文字列を伏字にすることができる。
-        + <b>ホームディレクトリからの</b>ファイルパスを記載すると、そのファイルはファイルツリーに表示されなくなり、直接URLを叩いてもそのファイルを表示することができなくなる。
+        + **ホームディレクトリからの**ファイルパスを記載すると、そのファイルはファイルツリーに表示されなくなり、直接URLを叩いてもそのファイルを表示することができなくなる。
         + また、[ ファイルパス: "置換したい文字列" --> "置換する文字列" ] と記載することで、そのファイルの中の文字列を置換することが可能。
     + ほか仕様
         + SBZMCフォルダ、ignore.txt記載ファイル、隠しファイル、公開パーミッション"-r"などのファイルはツリーから辿れなくなっている。(URLも同様)<b style="color:crimson;">(まだ未実装)</b>
@@ -40,22 +40,23 @@
         + "password"と書かれたファイルの表示、警告
 + カスタマイズ(static/customForUser)
     + static/customForUser/color.cssに色系デザインをまとめているので適宜変更してもよい
-    + static/customForUser/INDEX.mdというファイルを作ると、トップページでそれを読み込む。
+    + static/customForUser/INDEX.mdというファイルを作ると、トップページでそれを読み込む。({{ name }}でユーザー名を表示)
     + static/customForUser/indeximg.画像拡張子という画像ファイルを置くとユーザー画像を変更可能
     + static/customForUser/background.画像拡張子という画像ファイルを置くとスマホナビゲーション背景画像を変更可能
     + ほか、main.jsの中で背景のラインの色を変えることも可能。ただしこちらは自己責任で。
 
 ### Demo
-+ <a style="font-size:130%;" href="http://gms.gdl.jp/~yoshihiro/sbzmc/">  --http://gms.gdl.jp/~yoshihiro/sbzmc/</a>
+
++ [http://gms.gdl.jp/~yoshihiro/sbzmc/](http://gms.gdl.jp/~yoshihiro/sbzmc/)
 
 ### Usage
 1. ここGithubからDownloadしてzipファイルを解凍する。
 2. その解凍されたフォルダの中に入っている"SBZMC"フォルダ, "bin"フォルダを$scpコマンドかFTPを使って、石橋ゼミサーバの自分のホームディレクトリにアップロードする。
-    + <b>ただし、自分のホームディレクトリの中にbinフォルダがすでにある場合、解凍されたbinフォルダの中の"formatting"ファイルを、すでにあるbinフォルダの中にアップロードする。</b>
+    + **ただし、自分のホームディレクトリの中にbinフォルダがすでにある場合、解凍されたbinフォルダの中の"formatting"ファイルを、すでにあるbinフォルダの中にアップロードする。**
     + "$cd ~" コマンドでホームディレクトリに移動でき、pwdで自分の位置を確認できます。
-    + 結果的に <b>/home/h0/ユーザー名/SBZMC と /home/h0/ユーザー名/bin</b> となればOK!
+    + 結果的に **/home/h0/ユーザー名/SBZMC と /home/h0/ユーザー名/bin** となればOK!
 3. formattingコマンドを入力し初期化する。(ただ"formatting"と入力してエンター。)formattingコマンドを打つと色々指示が出てくるので各々従うこと。
-4. 石橋先生に/etc/httpd/conf.d/mod_wsgi.confのとこに設定を追加してもらう
+4. 石橋先生に/etc/httpd/conf.d/mod_wsgi.confのところに下の設定を追加してもらう
 
 ```
 ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
@@ -80,20 +81,20 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
     + HTML5
     + CSS3
     + Javascript
-        + <a href="https://slideout.js.org/">slideout.js</a>
+        + [slideout.js](https://slideout.js.org/)
     + Design
-        + <a href="http://genericons.com/">Genericon</a>
+        + [Genericon](http://genericons.com/)
     + Fonts
-        + <a href="https://www.behance.net/gallery/11696089/quasith-free-font">Quasith-Regular</a>
-        + <a href="https://fonts.google.com/specimen/Source+Code+Pro">Source Code Pro(GoogleFonts)</a>
+        + [Quasith-Regular](https://www.behance.net/gallery/11696089/quasith-free-font)
+        + [Source Code Pro(GoogleFonts)](https://fonts.google.com/specimen/Source+Code+Pro)
 + Backends
     + Python(3.5)
-        + Flask(Python/Webアプリケーションフレームワーク)
-        + Jinja2(Python/HTMLテンプレート)
+        + [Flask(Python/Webアプリケーションフレームワーク)](http://flask.pocoo.org/)
+        + [Jinja2(Python/HTMLテンプレート)](http://jinja.pocoo.org/docs/2.9/)
     + ShellScript(bin/formatting)
 
 ### Author
-+ Yoshihiro-F (<a href="https://github.com/Yoshihiro-F/">@Yoshihiro-F</a>)
++ Yoshihiro-F ([@Yoshihiro-F](https://github.com/Yoshihiro-F/))
 
 ### LICENCE
 ##### Copyright (c) 2016 Yoshihiro Furudate
