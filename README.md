@@ -93,6 +93,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
         + [Flask(Python/Webアプリケーションフレームワーク)](http://flask.pocoo.org/)
         + [Jinja2(Python/HTMLテンプレート)](http://jinja.pocoo.org/docs/2.9/)
     + ShellScript(bin/formatting)
+    + PHP5(files.php)
 
 ### Author
 + Yoshihiro-F ([@Yoshihiro-F](https://github.com/Yoshihiro-F/))
