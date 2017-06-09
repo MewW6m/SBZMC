@@ -31,7 +31,7 @@ if len(bgmatched) == 0:
 else:
     background = homepath + "static/customForUser/" + bgmatched[0]
 year = datetime.today().year
-filelist = maintree("../"); del filelist[0]
+filelist = maintree("../")
 linkactive = "nonactive" # default
 downloadactive = "nonactive" # default
 

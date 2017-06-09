@@ -18,12 +18,11 @@
         + ただしもちろん、置換された文字列などはそのまま置換されたままで表示される。
     + link.txt
         + あるフォルダの中に"link.txt"というファイルを置き、そのなかにURLを記載すると、そのファイルと同じ階層のファイルは全てLINKボタンからそのURLにジャンプすることが可能になる。
-    + ignore.txt <b style="color:crimson;">(まだ未実装)</b>
+    + ignore.txt
         + SBZMCフォルダの中に"ignore.txt"というファイルを置くと、その中のファイル名をファイルツリーで辿れなくしたり、パスワードなどの文字列を伏字にすることができる。
         + **ホームディレクトリからの**ファイルパスを記載すると、そのファイルはファイルツリーに表示されなくなり、直接URLを叩いてもそのファイルを表示することができなくなる。
-        + また、[ ファイルパス: "置換したい文字列" --> "置換する文字列" ] と記載することで、そのファイルの中の文字列を置換することが可能。
     + ほか仕様
-        + SBZMCフォルダ、ignore.txt記載ファイル、隠しファイル、公開パーミッション"-r"などのファイルはツリーから辿れなくなっている。(URLも同様)<b style="color:crimson;">(まだ未実装)</b>
+        + SBZMCフォルダ、ignore.txt記載ファイル、隠しファイル、公開パーミッション"-r"などのファイルはツリーから辿れなくなっている。(URLも同様)
         + スマホナビゲーションメニューは、スクロールして閉じてもまた、上にスクロールリセットがかかるようにしている。
         + Twitter, OGPカードの自動設定。
         + フォルダ名にURLを渡すと、その下のREADME.mdを読みに行く。(リダイレクト)
@@ -72,10 +71,11 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
 
 | date | Change-Detail |
 |:---:|:--------------:|
-| 2016-01-06 | pulishing all file first. |
-| 2016-02-28 | add the function of opening menu to the file when connect the file-url |
-| 2016-03-18 | readjustment the function of MDfile->html<br>(view-table,view-code,view_in_firefox_etc) |
-| 2016-06-07 | update css design and layout |
+| 2017-01-06 | pulishing all file first. |
+| 2017-02-28 | add the function of opening menu to the file when connect the file-url |
+| 2017-03-18 | readjustment the function of MDfile->html<br>(view-table,view-code,view_in_firefox_etc) |
+| 2017-06-07 | update css design and layout |
+| 2017-06-09 | **MAJOR UPDATE**: add function of ignore.txt |
 
 ### Requirement
 + Frontends

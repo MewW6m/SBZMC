@@ -32,7 +32,11 @@
 			<table><tbody>
 			{% if openfile|length < 17 and openfile|length > 0 %}
 				{% for fi in openfile %}
+					{% if fi|count == 0 %}
+					<tr><td class="codenumber" data-line-number="{{ loop.index }}"></td><td class="codetext"><br style="display:inherit;"></td></tr>
+					{% else %}
 					<tr><td class="codenumber" data-line-number="{{ loop.index }}"></td><td class="codetext">{{ fi|replace("/home/h0", "") }}</td></tr>
+					{% endif %}
 				{% endfor  %}
 				{% for x in range(17 - openfile|length) %}
 					<tr style="height:24px;"><td class="codenumber"></td><td class="codetext"></td></tr>
@@ -40,7 +44,11 @@
 			{% elif openfile|length == 0 %}
 			{% else %}
 				{% for fi in openfile %}
-					<tr><td class="codenumber" data-line-number="{{ loop.index }}"></td><td class="codetext">{{ fi }}</td></tr>
+					{% if fi|count == 0 %}
+                                        <tr><td class="codenumber" data-line-number="{{ loop.index }}"></td><td class="codetext"><br style="display:inherit;"></td></tr>
+                                        {% else %}
+                                        <tr><td class="codenumber" data-line-number="{{ loop.index }}"></td><td class="codetext">{{ fi|replace("/home/h0", "") }}</td></tr>
+                                        {% endif %}
 				{% endfor  %}
 			{% endif %}
 			</tbody></table>
