@@ -78,7 +78,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
 | 2017-06-09 | **MAJOR UPDATE**: add function of ignore.txt |
 
 ## Requirement
-+ Frontends
++ **Frontends**
     + HTML5
     + CSS3
     + Javascript
@@ -88,7 +88,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
     + Fonts
         + [Quasith-Regular](https://www.behance.net/gallery/11696089/quasith-free-font)
         + [Source Code Pro(GoogleFonts)](https://fonts.google.com/specimen/Source+Code+Pro)
-+ Backends
++ **Backends**
     + Python(3.5)
         + [Flask(Python/Webアプリケーションフレームワーク)](http://flask.pocoo.org/)
         + [Jinja2(Python/HTMLテンプレート)](http://jinja.pocoo.org/docs/2.9/)
