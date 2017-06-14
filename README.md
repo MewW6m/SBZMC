@@ -95,7 +95,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
     + ShellScript(bin/formatting)
     + PHP5(files.php)
 
-### Author
+## Author
 + Yoshihiro-F ([@Yoshihiro-F](https://github.com/Yoshihiro-F/))
 
 ## LICENCE
