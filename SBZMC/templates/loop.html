@@ -35,7 +35,7 @@
         {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 == filepath %}
          <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}"><span class="thisfile">{{ l4 }}</span></a></li>
         {% else %}
-         <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}">{{ l4 }}</a></li>
+         <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}"><span>{{ l4 }}</span></a></li>
         {% endif %}
        {% else %}
         <li><a class="folder"><span>{{ l4 }}</span></a><ul class="box">
@@ -44,7 +44,7 @@
           {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 == filepath %}
            <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}"><span class="thisfile">{{ l5 }}</span></a></li>
           {% else %}
-           <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}">{{ l5 }}</a></li>
+           <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}"><span>{{ l5 }}</span></a></li>
           {% endif %}
          {% else %}
           <li><a class="folder"><span>{{ l5 }}</span></a><ul class="box">
@@ -53,7 +53,7 @@
             {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 == filepath %}
              <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}"><span class="thisfile">{{ l6 }}</span></a></li>
             {% else %}
-             <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}">{{ l6 }}</a></li>
+             <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}"><span>{{ l6 }}</span></a></li>
             {% endif %}
            {% else %}
             <li><a class="folder"><span>{{ l6 }}</span></a><ul class="box">
@@ -62,7 +62,7 @@
               {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 + "/" + l7 == filepath %}
                <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}"><span class="thisfile">{{ l7 }}</span></a></li>
               {% else %}
-               <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}">{{ l7 }}</a></li>
+               <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}"><span>{{ l7 }}</span></a></li>
               {% endif %}
              {% else %}
               <li><a class="folder"><span>{{ l7 }}</span></a><ul class="box">
@@ -71,7 +71,7 @@
                 {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 + "/" + l7 + "/" + l8 == filepath %}
                  <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}"><span class="thisfile">{{ l8 }}</span></a></li>
                 {% else %}
-                 <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}">{{ l8 }}</a></li>
+                 <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}"><span>{{ l8 }}</span></a></li>
                 {% endif %}
                {% else %}
                 <li><a class="folder"><span>{{ l8 }}</span></a><ul class="box">
@@ -80,7 +80,7 @@
                   {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 + "/" + l7 + "/" + l8 + "/" + l9 == filepath %}
                    <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}"><span class="thisfile">{{ l9 }}</span></a></li>
                   {% else %}
-                   <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}">{{ l9 }}</a></li>
+                   <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}"><span>{{ l9 }}</span></a></li>
                   {% endif %}
                  {% else %}
                   <li><a class="folder"><span>{{ l9 }}</span></a><ul class="box">
@@ -89,7 +89,7 @@
                     {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 + "/" + l7 + "/" + l8 + "/" + l9 + "/" + l10 == filepath %}
                      <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}"><span class="thisfile">{{ l10 }}</span></a></li>
                     {% else %}
-                     <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}">{{ l10 }}</a></li>
+                     <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}"><span>{{ l10 }}</span></a></li>
                     {% endif %}
                    {% else %}
                     <li><a class="folder"><span>{{ l10 }}</span></a><ul class="box">
@@ -98,7 +98,7 @@
                       {% if l1 + "/" + l2 + "/" + l3 + "/" + l4 + "/" + l5 + "/" + l6 + "/" + l7 + "/" + l8 + "/" + l9 + "/" + l10 + "/" + l11 == filepath %}
                        <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}/{{ l11 }}"><span class="thisfile">{{ l11 }}</span></a></li>
                       {% else %}
-                       <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}/{{ l11 }}">{{ l11 }}</a></li>
+                       <li><a href="{{ homepath }}{{ l1 }}/{{ l2 }}/{{ l3 }}/{{ l4 }}/{{ l5 }}/{{ l6 }}/{{ l7 }}/{{ l8 }}/{{ l9 }}/{{ l10 }}/{{ l11 }}"><span>{{ l11 }}</span></a></li>
                       {% endif %}
                      {% endif %}
                     {% endfor %}
