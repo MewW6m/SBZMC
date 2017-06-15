@@ -76,6 +76,7 @@ ScriptAlias /~ユーザー名/sbzmc /home/h0/ユーザー名/SBZMC/connect.cgi
 | 2017-03-18 | readjustment the function of MDfile->html<br>(view-table,view-code,view_in_firefox_etc) |
 | 2017-06-07 | update css design and layout |
 | 2017-06-09 | **MAJOR UPDATE**: add function of ignore.txt |
+| 2017-06-15 | add the function of no access ignore.txt & This ver is stable ver.|
 
 ## Requirement
 + **Frontends**
