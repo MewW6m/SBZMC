@@ -1,6 +1,6 @@
 #!/usr/local/python/bin/python
 import sys, os, os.path, markdown, codecs, subprocess, json
-sys.path.append('/home/h0/yoshihiro/.local/lib/python3.5/site-packages')
+sys.path.append(os.path.expanduser('~') + '/.local/lib/python3.5/site-packages')
 from mdx_gfm import GithubFlavoredMarkdownExtension
 
 def maintree(dirname):
