@@ -1,1 +1,2 @@
-SBZMC/templates linguist-vendored
+SBZMC/templates/* linguist-vendored
+SBZMC/static/* linguist-vendored
