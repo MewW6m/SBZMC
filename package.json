@@ -1,0 +1,19 @@
+{
+  "name": "sbzmc",
+  "version": "1.0.0",
+  "description": "+ 石橋ゼミサーバにある自分のソースコードを公開、Webからみることができるようにするプログラム。\r + Gitなどを使って手動で更新をしなくても、ソースコード/ファイルツリーが自動で更新される。\r + そのソースコードの(Web)プログラムのリンクに飛んだり、ファイルをダウンロードすることも可能。\r + \"http://gms.gdl.jp/~ユーザ名/sbzmc/\" でSBZMCのトップページへ入れることができる。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MewW6m/SBZMC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MewW6m/SBZMC/issues"
+  },
+  "homepage": "https://github.com/MewW6m/SBZMC#readme"
+}
